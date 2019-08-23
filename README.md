@@ -30,13 +30,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    map creates a new arrey but foreach dont
+
 2. What is the difference between a function and a method?
+
+  methods declered in side an object but functions created globaly..
 
 3. What is closure?
 
+it is the parent chiled relation access is allowed only downwards..
+
 4. Describe the four rules of the 'this' keyword.
 
+global(value of “this” will be the window),implicit(value of “this” will be the value of calling obj),
+
+explicit(value of “this” will be defind out side of the obj),and new bindings(value of “this” will be assined by new created obj..
+
+
 5. Why do we need super() in an extended class?
+
+it allows us to acess the parents attributes and methods..
 
 ## Project Set up
 
