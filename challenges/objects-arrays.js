@@ -57,8 +57,8 @@ console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 console.log(tyrannosaurus.roar());
-
-
+console.log('****************************************************************************************************');
+console.log('****************************************************************************************************');
 // ==== Arrays ====
 
 // Given an array of college graduates.  Complete the following requests using any array method you like
@@ -100,15 +100,15 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. 
 Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-//const unisWithUni = [];
-// unisWithUni= graduates.filter(function(item){
-//    //true or false 
-//    return item.university ==="Uni*"; });
-// console.log(unisWithUni);
+const unisWithUni = [];
 
-
-
-
+for(i=0;i<graduates.length;i++){
+  unisWithUni.push(graduates[i].university.match('Uni'));
+}
+console.log(unisWithUni);
+console.log('****************************************************************************************************');
+console.log('****************************************************************************************************');
+//string.match(regexp)
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
@@ -134,11 +134,11 @@ should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
 const displayNames = [];
-zooAnimals.forEach(function (uname) {
+zooAnimals.forEach( (uname) =>{
   displayNames.push(` Name:${uname.animal_name},Scientific: ${uname.scientific_name}`);
  });
 console.log(displayNames);
-
+console.log('****************************************************************************************************');
 /* Request 2: .map()
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, 
@@ -152,11 +152,11 @@ var lowCaseAnimalNames = [];
 // });
 // console.log(lowCaseAnimalNames);
 
-lowCaseAnimalNames=zooAnimals.map(function(fname){
-  return(fname.animal_name.toLowerCase());
-});
-console.log(lowCaseAnimalNames);
+lowCaseAnimalNames=zooAnimals.map((fname) => fname.animal_name.toLowerCase());
+  
 
+console.log(lowCaseAnimalNames);
+console.log('****************************************************************************************************');
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects 
@@ -168,7 +168,7 @@ lowPopulationAnimals = zooAnimals.filter(function(item){
     return item.population < 5;
   });
 console.log(lowPopulationAnimals);
-
+console.log('****************************************************************************************************');
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos 
